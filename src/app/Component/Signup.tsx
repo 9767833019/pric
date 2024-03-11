@@ -53,6 +53,10 @@ const Signup: React.FC = () => {
     router.push('/After');
 };
 
+const redirectToNewUser = () => {
+  router.push('/NewUser');
+};
+
   return (
     <div className="bg-gray-200 font-medium text-violet-600 w-80 h-96 flex-col border p-4 rounded-md shadow-md items-center justify-center" >
         <div className="flex justify-center items-center">
@@ -92,13 +96,19 @@ const Signup: React.FC = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center space-y-10 p-2">
+      <div className="flex-col justify-center space-y-10 p-2">
         <button
-          className="bg-slate-10 w-28 border-2 text-black bg-violet-600 p-2 align-middle rounded-md space-y-10"
-          onClick={redirectToAfter}
-        >
-          <h3>Sign Up</h3>
+          className="bg-slate-10 w-28 border-2 text-black bg-violet-600 p-2 align-middle rounded-md"
+          onClick={redirectToAfter}>
+          <h3>Login </h3>
         </button>
+
+        {/* <button
+          className="bg-slate-10 w-28 border-2 text-black bg-violet-600 p-2 align-middle rounded-md  space-y-10"
+          onClick={redirectToNewUser}>
+          <h3>New User </h3>
+        </button> */}
+
       </div>
     </div>
   );
